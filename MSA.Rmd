@@ -1,0 +1,18 @@
+---
+title: "MSA 2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<p style="font-family: times; font-size:20pt">
+**Abstract**
+</p>
+<p style="font-family: times; font-size:15pt">
+Both directly and indirectly, fungi play a key role in carbon cycling, ecosystem diversity, plant nutrition, and plant productivity. A key limiting factor in building and maintaining local fungal diversity is distribution efficacy.  It is known that large mammals, such as ungulates, participate in mycophagy, but it is unknown how important they are for fungal dispersal via directly eating fungi or incidentally consuming it via herbivory. We are investigating the distribution and viability of fungal spores by ungulate vectors. The dung of three distinct ungulates (White-tailed deer, Bighorn sheep, and Eastern elk) is being collected from diverse sites including Northern Utah, Capitol Reef National Park, and the Ozark Mountains so far. Dung is prepared, cultured, and analyzed for viable fungal propagules in a variety of media before identification via Sanger sequencing. Sterilized dung placed in situ serves as sterile controls to remove the influence of other local dispersal mechanisms. Future expansion of this project will incorporate other mammal groups such as primates and their relationship with viable fungal dispersal.
+</p>
+```{r, echo=FALSE}
+knitr::include_graphics("images/pp.png")
+```

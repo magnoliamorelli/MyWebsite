@@ -8,4 +8,8 @@ navbar:
       href: Journal.html
     - text: "CV"
       href: Links.html
+    - text: "Web Scrapping"
+      href: web.html
+    - text: "MSA 2022"
+      href: MSA.html
 output_dir: "docs"
