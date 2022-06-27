@@ -1,11 +1,11 @@
-name: "MyLabJournal"
+name: "Magnolia's Site"
 navbar:
-  title: "MyLabJournal"
+  title: "Magnolia's Site"
   left:
-    - text: "Home"
+    - text: "About Me"
       href: index.html
-    - text: "Journal"
+    - text: "Current Research"
       href: Journal.html
-    - text: "Links"
+    - text: "CV"
       href: Links.html
 output_dir: "docs"
