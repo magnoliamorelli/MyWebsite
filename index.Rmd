@@ -1,6 +1,11 @@
 ---
 title: "Magnolia's Site"
-output: html_document
+output: 
+  html_document: 
+    theme:
+      bg: "#fef3dd"
+      fg: "#11010a"
+      primary: "#0492fa"
 ---
 
 <p style="font-family: times; font-size:15pt">

@@ -1,13 +1,11 @@
 ---
 title: "  "
-output:
-  html_document:
-    toc: true
-    toc_float: true
-    collapsed: false
-    number_sections: false
-    toc_depth: 1
-    #code_folding: hide
+output: 
+  html_document: 
+    theme:
+      bg: "#fef3dd"
+      fg: "#11010a"
+      primary: "#0492fa"
 ---
 
 ```{r setup, include=FALSE}

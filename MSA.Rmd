@@ -1,6 +1,11 @@
 ---
 title: "MSA 2022"
-output: html_document
+output: 
+  html_document: 
+    theme:
+      bg: "#fef3dd"
+      fg: "#11010a"
+      primary: "#0492fa"
 ---
 
 ```{r setup, include=FALSE}

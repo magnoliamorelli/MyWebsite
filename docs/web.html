@@ -13,22 +13,14 @@
 
 <title>Web-Scraping</title>
 
-<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
-<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
-<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
-<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
-<style>h1 {font-size: 34px;}
-       h1.title {font-size: 38px;}
-       h2 {font-size: 30px;}
-       h3 {font-size: 24px;}
-       h4 {font-size: 18px;}
-       h5 {font-size: 16px;}
-       h6 {font-size: 12px;}
-       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
-       pre:not([class]) { background-color: white }</style>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<link href="site_libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script>
+<script src="site_libs/bs3compat-0.3.1/transition.js"></script>
+<script src="site_libs/bs3compat-0.3.1/tabs.js"></script>
+<script src="site_libs/bs3compat-0.3.1/bs3compat.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -60,6 +52,7 @@ if (window.hljs) {
 
 
 
+
 <style type = "text/css">
 .main-container {
   max-width: 940px;
@@ -80,6 +73,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -232,7 +228,7 @@ $(document).ready(function () {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -274,10 +270,10 @@ $(document).ready(function () {
 
 
 <p style="font-family: times; font-size:20pt">
-<strong>Introduction</strong>
+<p><strong>Introduction</strong></p>
 </p>
 <p style="font-family: times; font-size:15pt">
-For my first <em>R Studio Learning</em> class at UVU, I was tasked to
+<p>For my first <em>R Studio Learning</em> class at UVU, I was tasked to
 create a webpage of my choosing. The webpage was supposed to help us
 learn a different technique in R and teach it to our peers. I always
 found it difficult to find perfectly organized, clean data on online
@@ -285,13 +281,13 @@ websites. Because of this I decided to learn how to scrape webpages for
 the specific things that I needed. Whatever table, paragraph, or hidden
 image I wanted, I could grab off and import into R studio. From there, I
 can better clean and rearrange the data to my specific needs, producing
-a perfect image or data frame.
+a perfect image or data frame.</p>
 </p>
 <p style="font-family: times; font-size:17pt">
-<strong>The Basics</strong>
+<p><strong>The Basics</strong></p>
 </p>
 <p style="font-family: times; font-size:15pt">
-The fist step to web scraping is reading in a webpage. This is done
+<p>The fist step to web scraping is reading in a webpage. This is done
 simply by: <strong>read_html(“webpage”)</strong>. Once a webpage is read
 in, you can begin gathering data. The easiest way to import any data is
 to search for tables within a website: <strong>html_tables()</strong>,
@@ -305,22 +301,23 @@ terms you must use an HTML element. By downloading a plug-in titled:
 <strong>SelectorGadget</strong>, you are able to highlight any part of a
 webpage and grab the CSS or XPath element. When scraping an HTML
 element, you must read it in through its “path”. This allows R to scan
-an HTML document and look for the specific data that you want.
+an HTML document and look for the specific data that you want.</p>
 </p>
 <p><br />
 <br />
 </p>
-<img src="images/SG_1.png" /> <img src="images/SG_1.png" /><br />
+<p><img src="images/SG_1.png" /> <img src="images/SG_1.png" /><br />
 <br />
 <br />
+</p>
 <p style="font-family: times; font-size:15pt">
-<em>If you are curious where these paths are located, you can inspect an
-element. This brings up the actual HTML website code shown below.</em>
-Each line represents an element to a certain website. Paragraphs,
-sentences, headers, tables, pictures, anything you can think of is
-tracked through this code. This may seem difficult to read but once you
-know what you are looking for, you can “search” and extract specific
-text from any website into R studio.
+<p><em>If you are curious where these paths are located, you can inspect
+an element. This brings up the actual HTML website code shown
+below.</em> Each line represents an element to a certain website.
+Paragraphs, sentences, headers, tables, pictures, anything you can think
+of is tracked through this code. This may seem difficult to read but
+once you know what you are looking for, you can “search” and extract
+specific text from any website into R studio.</p>
 </p>
 <p><br />
 <br />
@@ -331,13 +328,14 @@ text from any website into R studio.
 <br />
 </p>
 <p style="font-family: times; font-size:17pt">
-<strong>The First Webpage</strong>
+<p><strong>The First Webpage</strong></p>
 </p>
 <p style="font-family: times; font-size:15pt">
-A typical website will have either a built “table”, paragraph or a type
-of image explaining a certain topic. This is difficult to manipulate and
-gain any actual data from. My first website contained certain
-demographics about each world country. It looked a little like this:
+<p>A typical website will have either a built “table”, paragraph or a
+type of image explaining a certain topic. This is difficult to
+manipulate and gain any actual data from. My first website contained
+certain demographics about each world country. It looked a little like
+this:</p>
 </p>
 <p><br />
 <br />
@@ -349,31 +347,33 @@ demographics about each world country. It looked a little like this:
 href="https://www.worldometers.info/geography/alphabetical-list-of-countries/"
 class="uri">https://www.worldometers.info/geography/alphabetical-list-of-countries/</a></p>
 </div>
+<p><br />
 <br />
 <br />
-<br />
+</p>
 <p style="font-family: times; font-size:15pt">
-By using the SelectorGadget and importing the websites tables I was able
-to gather information about each country (population, land area, and
-density). Once imported, the data was disorganized and a bit messy.
+<p>By using the SelectorGadget and importing the websites tables I was
+able to gather information about each country (population, land area,
+and density). Once imported, the data was disorganized and a bit messy.
 Through some cleaning, rearranging, and time I was able to create a data
 frame in R with the information that I wanted. Below is an example of
-the code needed to import and clean data from a website.
+the code needed to import and clean data from a website.</p>
 </p>
 <p><br />
 <br />
 <br />
 </p>
-<img src="images/SC_1.png" /><br />
+<p><img src="images/SC_1.png" /><br />
 <br />
 <br />
+</p>
 <p style="font-family: times; font-size:15pt">
-After I had gathered all my data, I wanted to put it to use. Combining
-some other packages I created a scroll table that can be saved as an
-HTML document and imported into any website or presentation. This was
-how I chose to present the data scraped from a webpage; however, the
+<p>After I had gathered all my data, I wanted to put it to use.
+Combining some other packages I created a scroll table that can be saved
+as an HTML document and imported into any website or presentation. This
+was how I chose to present the data scraped from a webpage; however, the
 data was saved as a data.frame within R. The same code could be ran on
-another computer and manipulated in any way that is needed.
+another computer and manipulated in any way that is needed.</p>
 </p>
 <p><br />
 <br />
@@ -1195,20 +1195,21 @@ another computer and manipulated in any way that is needed.
 </table></div>
 </body>
 </html>
+<p><br />
 <br />
 <br />
-<br />
+</p>
 <p style="font-family: times; font-size:17pt">
-<strong>The Second Webpage</strong>
+<p><strong>The Second Webpage</strong></p>
 </p>
 <p style="font-family: times; font-size:15pt">
-To show extra manipulation of the data I wanted to make a more
+<p>To show extra manipulation of the data I wanted to make a more
 interactive display of the previous list of countries. I found a
 separate website that provided me with the latitude and longitude of
 every country, this I could use to create a world map. To complete this
 task, I web scraped the below table into a separate data.frame within R.
 Combining my previous df and this one, I created a full list of
-countries, their lat/long, and populations.
+countries, their lat/long, and populations.</p>
 </p>
 <p><br />
 <br />
@@ -1220,9 +1221,10 @@ countries, their lat/long, and populations.
 href="https://developers.google.com/public-data/docs/canonical/countries_csv"
 class="uri">https://developers.google.com/public-data/docs/canonical/countries_csv</a></p>
 </div>
+<p><br />
 <br />
 <br />
-<br />
+</p>
 <p style="font-family: times; font-size:15pt">
 <p><strong>Combining web scraping with other packages I was able to
 produce an interactive map of the world.</strong></p>
@@ -1233,14 +1235,15 @@ interactive map</em></a></p>
 <hr />
 </p>
 <p style="font-family: times; font-size:17pt">
-<strong>The Third Webpage</strong>
+<p><strong>The Third Webpage</strong></p>
 </p>
 <p style="font-family: times; font-size:15pt">
-For my final push of learning web scraping, I wanted to be a little more
-creative. I found a website that listed most visited countries within a
-map. The website with the above information was a little more tricky.
-Using the HTML inspector code, I was able to pinpoint the top visited
-countries within the websites map and scrape the data into R studio.
+<p>For my final push of learning web scraping, I wanted to be a little
+more creative. I found a website that listed most visited countries
+within a map. The website with the above information was a little more
+tricky. Using the HTML inspector code, I was able to pinpoint the top
+visited countries within the websites map and scrape the data into R
+studio.</p>
 </p>
 <div class="figure">
 <img src="images/WS_3.png" alt="" />
@@ -1248,24 +1251,26 @@ countries within the websites map and scrape the data into R studio.
 href="https://worldpopulationreview.com/country-rankings/most-visited-countries"
 class="uri">https://worldpopulationreview.com/country-rankings/most-visited-countries</a></p>
 </div>
+<p><br />
 <br />
-<br />
+</p>
 <p style="font-family: times; font-size:15pt">
-This df was then combined through R code with a second CSV file of top
-visited tourist attractions to create the below table. This graphs shows
-the amount of tourist arrivals and when each bar is hovered over, the
-top tourist attraction in each country.<br />
+<p>This df was then combined through R code with a second CSV file of
+top visited tourist attractions to create the below table. This graphs
+shows the amount of tourist arrivals and when each bar is hovered over,
+the top tourist attraction in each country.<br />
+</p>
 </p>
 <hr />
 <p><a href="Web/Fourth_Webpage/p.html"><em>Click here for an interactive
 graph</em></a></p>
 <hr />
 <p style="font-family: times; font-size:17pt">
-<strong>Conclusion</strong>
+<p><strong>Conclusion</strong></p>
 </p>
 <p style="font-family: times; font-size:15pt">
-Not only was I able to master the art of web scraping but I also learned
-some valuable packages such as XML2, rvest, janitor, KableExtra,
+<p>Not only was I able to master the art of web scraping but I also
+learned some valuable packages such as XML2, rvest, janitor, KableExtra,
 HTMLWidgets, and plotly. No longer will I be hand coping every data set
 into excel file to use at a later date. I can now run code through any
 website and gather the data that I need to right from R studio. I have
@@ -1278,7 +1283,7 @@ scraping I am able to avoid all of the middle man. The greatest skill
 that I learned from web scraping is taking an online table and importing
 it directly into R studio where I can clean, manipulate, and produce
 statistical data. I can now take that data and turn it into a paper
-worthy of publication.
+worthy of publication.</p>
 </p>
 <p><br />
 <br />

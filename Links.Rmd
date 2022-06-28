@@ -1,6 +1,12 @@
 ---
 title: "Cirriculum Vitae"
-output: html_document
+output: 
+  html_document: 
+    theme:
+      bg: "#fef3dd"
+      fg: "#11010a"
+      primary: "#0492fa"
+
 ---
 
 ```{r, echo=FALSE}
