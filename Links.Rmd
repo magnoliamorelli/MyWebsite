@@ -9,7 +9,7 @@ output:
 ---
 
 ```{r, echo=FALSE}
-knitr::include_graphics("Images/CV-0000.png")
+knitr::include_graphics("Images/CV-0000.jpg")
 ```
 ```{r, echo=FALSE}
 knitr::include_graphics("Images/CV-0001.png")
