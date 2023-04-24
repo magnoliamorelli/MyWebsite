@@ -1,5 +1,5 @@
 ---
-title: "Magnolia's Site"
+title: "About Me"
 output: 
   html_document: 
     theme:
